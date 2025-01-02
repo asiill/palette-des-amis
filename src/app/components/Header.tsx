@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import Button from "./Button";
 
 export default function Header() {
     return (
@@ -8,16 +9,17 @@ export default function Header() {
                 <div className="flex gap-2 items-center">
                     <Image
                         src="/images/palette.png"
-                        width={25}
-                        height={25}
+                        width={200}
+                        height={133}
                         alt="a colour palette"
                     />
-                    <h1 className="text-md">Palette des amis</h1>
                 </div>
             </Link>
-            <nav className="text-md flex flex-col gap-6 md:flex-row md:items-center">
-                <Link href="/login">Login</Link>
-                <Link href="/signup">Signup</Link>
+            <nav className="text-md flex flex-col gap-10 md:flex-row md:items-center">
+                <div className="text-sm transition hover:text-[#73b9be]"><Link href="/#about">About</Link></div>
+                <div className="text-sm transition hover:text-[#73b9be]"><Link href="/#contact">Contact</Link></div>
+                <Button link="login"/>
+                <Button link="signup" />
             </nav>
         </header>
     );
