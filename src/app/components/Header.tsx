@@ -4,7 +4,7 @@ import Button from "./Button";
 
 export default function Header() {
     return (
-        <header className="flex flex-col gap-8 p-12 pb-6 md:flex-row md:justify-between md:items-center">
+        <header className="flex flex-col gap-8 p-16 pb-6 md:flex-row md:justify-between md:items-center">
             <Link href="/">
                 <div className="flex gap-2 items-center">
                     <Image
