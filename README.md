@@ -6,7 +6,7 @@ https://palette-des-amis.vercel.app
 
 ## Getting started
 ```bash
-git clone git@github.com:asiill/paper-and-pigment.git
+git clone git@github.com:asiill/palette-des-amis.git
 cd palette-des-amis
 npm install
 npm start
@@ -17,5 +17,5 @@ npm start
 * [Tailwind CSS](https://tailwindcss.com/)
 
 ## Our team
-- Khadija Jarrar [GitHub](https://github.com/khadija-jarrar)
-- Aseel Shakra [GitHub](https://github.com/asiill)
+- Khadija Jarrar: [GitHub](https://github.com/khadija-jarrar)
+- Aseel Shakra: [GitHub](https://github.com/asiill)
