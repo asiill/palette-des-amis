@@ -16,8 +16,8 @@ export default function Header() {
                 </div>
             </Link>
             <nav className="text-md flex flex-col gap-10 md:flex-row md:items-center">
-                <div className="text-sm transition hover:text-[#73b9be]"><a href="/#about">About</a></div>
-                <div className="text-sm transition hover:text-[#73b9be]"><a href="/#contact">Contact</a></div>
+                <div className="text-sm transition hover:text-[#73b9be]"><Link href="/#about">About</Link></div>
+                <div className="text-sm transition hover:text-[#73b9be]"><Link href="/#contact">Contact</Link></div>
                 <Button link="login"/>
                 <Button link="signup" />
             </nav>

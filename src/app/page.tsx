@@ -8,7 +8,7 @@ export default function Home() {
       <div className="grid grid-cols-2 items-center p-16">
 
         <div className="col-span-1 flex flex-col gap-4">
-          <h1 className="text-3xl">Friends' Palette</h1>
+          <h1 className="text-3xl">Friends&#39; Palette</h1>
           <p className="text-lg">
             Ignite your creativity and find your community by connecting with fellow artists through engaging art challenges and projects.
           </p>
