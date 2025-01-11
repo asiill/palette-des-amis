@@ -5,9 +5,9 @@ export default function Home() {
   return (
     <main className="flex flex-col gap-20">
 
-      <div className="grid grid-cols-2 items-center p-16">
+      <div className="grid grid-cols-1 gap-8 items-center p-16 sm:grid-cols-2">
 
-        <div className="col-span-1 flex flex-col gap-4">
+        <div className="flex flex-col gap-4 sm:order-first">
           <h1 className="text-3xl">Friends&#39; Palette</h1>
           <p className="text-lg">
             Ignite your creativity and find your community by connecting with fellow artists through engaging art challenges and projects.
@@ -19,7 +19,7 @@ export default function Home() {
           </Link>
         </div>
 
-        <div className="col-span-1 flex justify-self-end">
+        <div className="flex justify-center order-first sm:justify-self-end">
           <Image
             src="/images/painting.png"
             width={400}

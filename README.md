@@ -1,5 +1,5 @@
 # Palette des Amis | Friends' Palette
-A creative space to connect with fellow artists and work on challenges and imrpove together, share ideas and get feedback.
+A creative space to connect with fellow artists, participate in challenges share ideas and get feedback to improve together.
 
 ## Demo
 https://palette-des-amis.vercel.app
