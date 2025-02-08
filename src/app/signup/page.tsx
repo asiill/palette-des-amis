@@ -1,8 +1,8 @@
 export default function Signup() {
   return (
-    <div className=" flex items-center justify-center px-4">
+    <div className=" flex items-center justify-center px-4 ">
       {/* Conteneur principal avec deux colonnes */}
-      <div className="flex flex-col md:flex-row-reverse items-center md:items-start w-full max-w-4xl bg-[rgb(255 255 255 / 0%)] p-8 rounded-lg shadow-2xl">
+      <div className="flex flex-col md:flex-row-reverse items-center md:items-start w-full max-w-4xl bg-[rgb(255 255 255 / 0%)] p-8 rounded-lg shadow-2xl mb-[70px]">
         
         {/* Image à droite (masquée sur mobile) */}
         <div className="hidden md:block w-1/2">
