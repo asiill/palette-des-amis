@@ -1,50 +1,65 @@
-import Link from "next/link";
 import Image from "next/image";
+import Contact from "./components/Contact";
+import Nav from "./components/Nav";
+import About from "./components/About";
 
 export default function Home() {
   return (
-    <main className="flex flex-col gap-20">
+    <main className="flex flex-col gap-8 sm:gap-20">
 
-      <div className="grid grid-cols-1 gap-8 items-center p-16 sm:grid-cols-2">
-
-        <div className="flex flex-col gap-4 sm:order-first">
-          <h1 className="text-3xl">Friends&#39; Palette</h1>
-          <p className="text-lg">
-            Ignite your creativity and find your community by connecting with fellow artists through engaging art challenges and projects.
+      <div className="flex flex-col gap-8 justify-center items-center p-8 sm:p-16 sm:pt-0 sm:flex-row sm:gap-20">
+        <div className="flex flex-col gap-8 max-w-md">
+          <h1 className="gradient-text font-bold text-3xl sm:text-5xl">Friends&#39; Palette</h1>
+          <p className="text-base sm:text-xl">
+            Share ideas and inspire your imagination by connecting with others though art challenges and projects.
           </p>
-          <Link href="/singup">
-            <button className="text-sm flex items-center justify-center rounded-lg p-2 w-fit font-bold bg-[#73b9be]">
-              Start here
-            </button>
-          </Link>
+          <div>
+            <Nav link="signup" text="Start Here" />
+          </div>
         </div>
-
-        <div className="flex justify-center order-first sm:justify-self-end">
+        <div className="flex order-first justify-center sm:order-last">
           <Image
-            src="/images/painting.png"
-            width={400}
-            height={400}
-            alt="a colour palette"
+            src="/images/hero.png"
+            width={500}
+            height={500}
+            alt="A grayscale sketch of two girls sitting face to face and painting on a canvas."
             style={{
               borderRadius: "100px",
+              minWidth: "100px",
             }}
           />
         </div>
-
       </div>
 
-      <div id="about" className="flex flex-col gap-6 p-16">
-        <h2 className="text-2xl">About...</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <div id="about" className="flex flex-col items-center gap-4 p-8 sm:p-16 bg-[rgba(0,0,0,0.05)]">
+        <h2 className="text-2xl sm:text-4xl">Create, Connect, <span className="gradient-text">Collaborate</span></h2>
+        <p className="text-base sm:text-xl text-gray-700">A place to your channel your creativity.</p>
+        <About />
       </div>
-
-      <div id="contact" className="flex flex-col gap-6 p-16">
-        <h2 className="text-2xl">Contact...</h2>
-        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            
+      <div id="contact" className="grid grid-cols-1 gap-8 items-center p-8 sm:p-16 sm:pt-0 sm:grid-cols-2">
+        <div className="flex flex-col gap-8 items-center">
+          <h2 className="text-2xl sm:text-4xl">Have <span className="gradient-text">Questions</span> ?</h2>
+          <p className="text-base text-gray-700 sm:text-xl">Send us a message here...</p>
+          <Contact />
+        </div>
+        <div className="flex order-first justify-center items-center sm:order-last">
+            <Image
+              src="/images/pexels-pixabay-356372.jpg"
+              width={500}
+              height={500}
+              alt="a piece of paper on a wooden table with an ink pen held over it, about to write a letter. A rose petal, the pen cap and an opened bottle of ink sit next to it."
+              style={{
+                borderRadius: "40px",
+                maxWidth: "500px",
+                minWidth: "100px",
+              }}
+            />
+        </div>
       </div>
 
     </main>
   );
 }
+
+//Photo by Pixabay: https://www.pexels.com/photo/brown-fountain-pen-356372/

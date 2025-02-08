@@ -1,25 +1,28 @@
 import Link from "next/link";
 import Image from "next/image";
-import Button from "./Button";
+import Nav from "./Nav";
 
 export default function Header() {
     return (
-        <header className="flex flex-col gap-8 items-center p-16 pb-6 sm:flex-row sm:justify-between">
+        <header className="flex flex-col gap-6 items-center p-8 sm:p-16 sm:pb-8 sm:flex-row sm:justify-between">
             <Link href="/">
                 <div className="flex gap-2 items-center">
                     <Image
-                        src="/images/palette.png"
+                        src="/images/logo.png"
                         width={200}
                         height={133}
-                        alt="a colour palette"
+                        alt="Two girls standing shoulder to shoulder. One is holding up a paint brush and the other is holding up a palette and two paint brushes. The text 'Friends' Palette' appears underneath the image."
+                        style={{
+                            minWidth: "100px",
+                        }}
                     />
                 </div>
             </Link>
-            <nav className="text-md flex flex-col gap-10 sm:flex-row sm:items-center">
+            <nav className="text-sm sm:text-base flex flex-col gap-6 sm:gap-10 sm:flex-row sm:items-center">
                 <div className="transition hover:text-[#73b9be]"><Link href="/#about">About</Link></div>
                 <div className="transition hover:text-[#73b9be]"><Link href="/#contact">Contact</Link></div>
-                <Button link="login"/>
-                <Button link="signup" />
+                <Nav link="login" text="Login" />
+                <Nav link="signup" text="Signup" />
             </nav>
         </header>
     );

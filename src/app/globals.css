@@ -3,16 +3,28 @@
 @tailwind utilities;
 
 :root {
-  --background: #E9E9E9;
   --foreground: #171717;
 }
 
 body {
   color: var(--foreground);
-  background-image: url(/images/background.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  font-family: Arial, Helvetica, sans-serif;
+  
+  background:
+    linear-gradient(-225deg, rgba(227, 253, 245, 0.6) 0%, rgba(255, 230, 250, 0.6) 100%),
+    url(/images/background.jpg); 
+  
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.gradient-text {
+  color: #923C82; /* Fallback color */
+  background: linear-gradient(90deg,#73B9BE 0%, #923C82 60%);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
