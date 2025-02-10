@@ -39,8 +39,10 @@ export default function Home() {
             
       <div id="contact" className="grid grid-cols-1 gap-8 items-center p-8 sm:p-16 sm:pt-0 sm:grid-cols-2">
         <div className="flex flex-col gap-8 items-center">
-          <h2 className="text-2xl sm:text-4xl">Have <span className="gradient-text">Questions</span> ?</h2>
-          <p className="text-base text-gray-700 sm:text-xl">Send us a message here...</p>
+          <div className="flex flex-col gap-2 items-center">
+            <h2 className="text-2xl sm:text-4xl">Have <span className="gradient-text">Questions</span> ?</h2>
+            <p className="text-base text-gray-700 sm:text-xl">Send us a message here...</p>
+          </div>
           <Contact />
         </div>
         <div className="flex order-first justify-center items-center sm:order-last">

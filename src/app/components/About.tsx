@@ -7,11 +7,8 @@ import Collaborate from "./Collaborate";
 
 export default function About() {
     const [currentSlide, setCurrentSlide] = useState(0);
-
-    /*const slides = Object.entries(slideContent).map(([key, { path, header, description }]) => ({
-        component: <Slide path={path} header={header} description={description} />,
-        title: key,
-    }));*/
+    const [touchStartX, setTouchStartX] = useState(0);
+    const [touchEndX, setTouchEndX] = useState(0);
 
     const slides = [
         { component: <Create />, title: "Create" },
@@ -41,8 +38,32 @@ export default function About() {
         }
     };
 
+    const handleTouchStart = (e: React.TouchEvent) => {
+        setTouchStartX(e.touches[0].clientX);
+    };
+
+    const handleTouchMove = (e: React.TouchEvent) => {
+        setTouchEndX(e.touches[0].clientX);
+    };
+
+    const handleTouchEnd = () => {
+        if (touchStartX - touchEndX > 50) {
+            // swipe left
+            nextSlide();
+        } else if (touchEndX - touchStartX > 50) {
+            // swipe right
+            prevSlide();
+        }
+    };
+
     return (
-        <div className="flex flex-col items-center gap-6 max-w-full px-4 sm:px-6" onKeyDown={handleKeyDown} tabIndex={0}>
+        <div className="flex flex-col items-center gap-6 max-w-full px-4 sm:px-6"
+            onKeyDown={handleKeyDown}
+            tabIndex={0}
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+        >
             <div className="relative w-full overflow-hidden">
                 <div 
                     className="flex transition-transform duration-500"
@@ -67,7 +88,7 @@ export default function About() {
             <div className="flex items-center justify-center gap-4 sm:gap-20">
                 <button 
                     onClick={prevSlide} 
-                    aria-label="Previous Slide" 
+                    aria-label="Previous Slide"
                     className="flex items-center justify-center p-2 rounded-full border border-solid border-[#73b9be] transition hover:text-white hover:bg-[#73b9be]"
                 >
                     <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round">

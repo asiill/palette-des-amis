@@ -18,7 +18,7 @@ export default function Header() {
                     />
                 </div>
             </Link>
-            <nav className="text-sm sm:text-base flex flex-col gap-6 sm:gap-10 sm:flex-row sm:items-center">
+            <nav className="text-sm sm:text-base flex flex-col items-center gap-6 sm:gap-10 sm:flex-row">
                 <div className="transition hover:text-[#73b9be]"><Link href="/#about">About</Link></div>
                 <div className="transition hover:text-[#73b9be]"><Link href="/#contact">Contact</Link></div>
                 <Nav link="login" text="Login" />
