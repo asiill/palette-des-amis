@@ -20,6 +20,10 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+main {
+  
+}
+
 .gradient-text {
   color: #923C82; /* Fallback color */
   background: linear-gradient(90deg,#73B9BE 0%, #923C82 60%);

@@ -1,5 +1,6 @@
 import { redirect } from "next/navigation";
 import { createClient } from "../../../utils/supabase/server";
+import UserForm from "./UserForm";
 
 export default async function PrivatePage() {
   const supabase = await createClient();
@@ -10,6 +11,8 @@ export default async function PrivatePage() {
   }
 
   return (
-        <p>Hello {data.user.email}</p>
+        <main className="flex justify-center items-center">
+          <UserForm user={data.user}/>
+        </main>
     );
 }
